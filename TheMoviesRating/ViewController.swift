@@ -15,6 +15,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func UpcomingMoviesAction(_ sender: UIButton) {
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "UpcomingViewController") as? UpcomingViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    
+    @IBAction func topRatedAction(_ sender: UIButton) {
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "GetVideosViewController") as? GetVideosViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
 }
 
